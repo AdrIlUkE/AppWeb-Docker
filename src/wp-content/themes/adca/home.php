@@ -18,17 +18,21 @@
             ?>
 
             <div class="col-sm-4 p-2">
+                <picture class="thumbnail">
                 <?php if(has_post_thumbnail()){
                     the_post_thumbnail('thumbnail', array('class' => 'img'));
                 } ?>
+                </picture>
                 <h1 class="display-6 inter-bold mb-5 mt-5"><?php echo the_title(); ?></h1>
-                <p class="inter-regular fs-6"> <?php echo the_excerpt(); ?> </p>
+                <p class="inter-regular fs-6"><?php echo the_excerpt(); ?> </p>
                 <div class="row">
                     <div class="col-sm-6">
                         <p class="inter-regular fs-6"><?=get_the_date()?></p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="inter-bold fs-6">Read more</p>
+                        <a href="<?php the_permalink(); ?>">
+                            <p class="inter-bold fs-6">Read more 2</p>
+                        </a>                        
                     </div>
                 </div>
             </div>
